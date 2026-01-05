@@ -12,7 +12,7 @@ async function getlocation(position) {
 
   try {
     let response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=3&aqi=yes&alerts=yes&lang=en`,
+      `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}&days=3&aqi=yes&alerts=yes&lang=en`,
       { method: "GET" }
     );
 
@@ -61,7 +61,7 @@ async function getWeatherCity() {
   const day1 = document.querySelector("#today .date");
 
   let response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityInputLocation.value}&days=3&aqi=yes&alerts=yes&lang=en`,
+    `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityInputLocation.value}&days=3&aqi=yes&alerts=yes&lang=en`,
     { method: "GET" }
   ).catch((error) => {
     Swal.fire({
